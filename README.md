@@ -9,10 +9,18 @@
 [![Dataset](https://img.shields.io/badge/Datasets-4d8cd8?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/datasets/Nickyang/FastCuRL/)
 </div>
 
+
 We release **FastCuRL-1.5B-Preview**, a slow-thinking reasoning model that achieves 43.1% accuracy on the AIME 2024 benchmark! We adapt a novel curriculum-guided iterative lengthening reinforcement learning to the distilled 1.5B model and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
 
 
 ## Key Results
+
+Training Details.
+| Model | Training Steps  | Training Stages | Number of GPUs Used in Each Stage |
+|-------|-----------|-----------|-----------|
+| DeepScaleR-1.5B-Preview | ~1,750 | 3 | 8, 16, 32 |
+| **FastCuRL-1.5B-Preview** | ~860 | 4 | 8, 8, 8, 8 |
+
 
 We report Pass@1 accuracy averaged over 16 samples for each problem.
 
@@ -26,6 +34,24 @@ We report Pass@1 accuracy averaged over 16 samples for each problem.
 | Still-1.5B | 32.5 | 84.4 | 66.7 | 29.0 | 45.4 | 51.6 |
 | DeepScaleR-1.5B-Preview | 43.1 | 87.8 | 73.6 | 30.2 | 50.0 | 57.0 |
 | <strong>FastCuRL-1.5B-Preview</strong> | <strong>43.1</strong> | <strong>88.0</strong> | <strong>74.2</strong> | 31.6 | <strong>50.4</strong> | <strong>57.5</strong> |
+
+
+## Training Data
+Following DeepScaleR, our training dataset consists of 40,315 unique problem-answer pairs compiled from:
+- AIME problems (1984-2023)
+- AMC problems (before 2023)
+- Omni-MATH dataset
+- Still dataset
+
+In FastCuRL, we propose a simple condition-sensitive data segmentation approach, which splits the original dataset into three subsets.
+[Segmented Datasets](https://huggingface.co/datasets/Nickyang/FastCuRL)
+
+## Training Strategy
+In FastCuRL, we propose a curriculum-guided iterative lengthening approach for improving the RL training efficiency of R1-like reasoning models. Specifically, the four stages are as follows:
+- Stage I (8K context,∼160 steps)
+- Stage II (16K context,∼295 steps)
+- Stage III (24K context,∼115 steps)
+- Stage IV (24K context,∼290 steps)
 
 
 ## Acknowledgements
