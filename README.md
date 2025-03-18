@@ -14,12 +14,14 @@ We release **FastCuRL-1.5B-Preview**, a slow-thinking reasoning model that achie
 
 ### Key Results
 
-Training Details.
+Training Details. 
+
 | Model | Training Steps  | Training Stages | Number of GPUs Used in Each Stage |
 |-------|-----------|-----------|-----------|
 | DeepScaleR-1.5B-Preview | ~1,750 | 3 | 8, 16, 32 |
 | **FastCuRL-1.5B-Preview** | ~860 | 4 | 8, 8, 8, 8 |
 
+Here, we uniformly set the batch size to 128 for counting training steps, meaning two steps with batch size 64 are counted as one with batch size 128.
 
 We report Pass@1 accuracy averaged over 16 samples for each problem.
 
@@ -42,17 +44,30 @@ Following DeepScaleR, our training dataset consists of 40,315 unique problem-ans
 - Omni-MATH dataset
 - Still dataset
 
+<p>
+<img src="img/length_distribution.png" width = "70%" />
+</p>
+
 In FastCuRL, we propose a simple condition-sensitive data segmentation approach, which splits the original dataset into three subsets.
 
 [Segmented Datasets](https://huggingface.co/datasets/Nickyang/FastCuRL)
 
+<p>
+<img src="img/length_distribution.png" width = "70%" />
+</p>
+
 ### Training Strategy
 In FastCuRL, we propose a curriculum-guided iterative lengthening approach for improving the RL training efficiency of R1-like reasoning models. Specifically, the four stages are as follows:
 - Stage I (8K context,∼160 steps)
+![alt text](img/fastcurl_stage1.png)
 - Stage II (16K context,∼295 steps)
+![alt text](img/fastcurl_stage2.png)
 - Stage III (24K context,∼115 steps)
+![alt text](img/fastcurl_stage3.png)
 - Stage IV (24K context,∼290 steps)
+![alt text](img/fastcurl_stage4.png)
 
+Overall, we find that during the whole training process, the steps chosen for stage transitions mainly occurred toward the end of each stage, further highlighting the efficiency of the proposed FastCuRL approach.
 
 ### Acknowledgements
 
