@@ -4,9 +4,9 @@
 
 <!-- TODO:  Thread, Paper, Dataset, Weights-->
 [![Paper](https://img.shields.io/badge/paper-5f16a8?style=for-the-badge&logo=arxiv&logoColor=white)](FastCuRL.pdf)
-[![Blog](https://img.shields.io/badge/Blog-3858bf?style=for-the-badge&logo=homepage&logoColor=white)](https://github.com/nick7nlp/FastCuRL)
 <a href="https://huggingface.co/Nickyang/FastCuRL-1.5B-Preview" target="_blank"><img alt="Hugging Face"
     src="https://img.shields.io/badge/HuggingFace-fcd022?style=for-the-badge&logo=huggingface&logoColor=000&labelColor"/></a>
+[![Dataset](https://img.shields.io/badge/Datasets-4d8cd8?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/datasets/Nickyang/FastCuRL/)
 </div>
 
 We release **FastCuRL-1.5B-Preview**, a slow-thinking reasoning model that achieves 43.1% accuracy on the AIME 2024 benchmark! We adapt a novel curriculum-guided iterative lengthening reinforcement learning to the distilled 1.5B model and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
