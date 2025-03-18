@@ -81,16 +81,19 @@ bash run_fastcurl-1.5b_24k.sh | tee fastcurl-1.5b-stage4.log
 <p>
 <img src="img/fastcurl_stage1.png" width = "90%" />
 </p>
+
 - Stage II (16K context,∼590 steps)
 
 <p>
 <img src="img/fastcurl_stage2.png" width = "90%" />
 </p>
+
 - Stage III (24K context,∼230 steps)
 
 <p>
 <img src="img/fastcurl_stage3.png" width = "90%" />
 </p>
+
 - Stage IV (24K context,∼580 steps)
 
 <p>
