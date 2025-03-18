@@ -1,5 +1,5 @@
 <div align='center'>
-<h1>FastCuRL-1.5B-Preview</h1>
+<h1>FastCuRL: Improving RL Training Efficiency of R1-like Reasoning Models via Curriculum-Guided Iterative Lengthening</h1>
 
 <!-- TODO:  Thread, Paper, Dataset, Weights-->
 [![Paper](https://img.shields.io/badge/paper-5f16a8?style=for-the-badge&logo=arxiv&logoColor=white)](FastCuRL.pdf)
