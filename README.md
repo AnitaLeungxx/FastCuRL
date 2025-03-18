@@ -9,6 +9,9 @@
     src="https://img.shields.io/badge/HuggingFace-fcd022?style=for-the-badge&logo=huggingface&logoColor=000&labelColor"/></a>
 </div>
 
+We release **FastCuRL-1.5B-Preview**, a slow-thinking reasoning model that achieves 43.1% accuracy on the AIME 2024 benchmark! We adapt a novel curriculum-guided iterative lengthening reinforcement learning to the distilled 1.5B model and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
+
+
 ## Key Results
 
 We report Pass@1 accuracy averaged over 16 samples for each problem.
