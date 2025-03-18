@@ -18,9 +18,9 @@ Training Details.
 | Model | Training Steps  | Training Stages | Number of GPUs Used in Each Stage |
 |-------|-----------|-----------|-----------|
 | DeepScaleR-1.5B-Preview | ~1,750 | 3 | 8, 16, 32 |
-| **FastCuRL-1.5B-Preview** | ~860 | 4 | 8, 8, 8, 8 |
+| **FastCuRL-1.5B-Preview** | ~860 | 4 | **8**, **8**, **8**, **8** |
 
-Here, we uniformly set the batch size to 128 for counting training steps, meaning two steps with batch size 64 are counted as one with batch size 128.
+Here, we uniformly set the batch size to 128 for counting training steps, meaning two steps with batch size 64 are counted as one with batch size 128. 
 
 We report Pass@1 accuracy averaged over 16 samples for each problem.
 
