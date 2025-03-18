@@ -101,5 +101,6 @@ Overall, we find that during the whole training process, the steps chosen for st
 
 ### Acknowledgements
 
-- Our training experiments are powered by our heavily modified fork of [verl](https://github.com/volcengine/verl) and [deepscaler](https://github.com/agentica-project/deepscaler).
 - Our model is trained on top of [`DeepSeek-R1-Distill-Qwen-1.5B`](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B).
+- Our training experiments are powered by our heavily modified fork of [verl](https://github.com/volcengine/verl).
+- We directly use DeepScaleR's [code](https://github.com/agentica-project/deepscaler) to finish our experiments. However, we have modified parts of the code related to naming conflicts to avoid confusion.
