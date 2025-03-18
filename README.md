@@ -1,6 +1,5 @@
 <div align='center'>
-<h1>FastCuRL</h1>
-<h1>Improving RL Training Efficiency of R1-like Reasoning Models via Curriculum-Guided Iterative Lengthening</h1>
+<h2>FastCuRL: Improving RL Training Efficiency of R1-like Reasoning Models via Curriculum-Guided Iterative Lengthening</h2>
 
 <!-- TODO:  Thread, Paper, Dataset, Weights-->
 [![Paper](https://img.shields.io/badge/paper-5f16a8?style=for-the-badge&logo=arxiv&logoColor=white)](FastCuRL.pdf)
@@ -13,7 +12,7 @@
 We release **FastCuRL-1.5B-Preview**, a slow-thinking reasoning model that achieves 43.1% accuracy on the AIME 2024 benchmark! We adapt a novel curriculum-guided iterative lengthening reinforcement learning to the distilled 1.5B model and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
 
 
-## Key Results
+### Key Results
 
 Training Details.
 | Model | Training Steps  | Training Stages | Number of GPUs Used in Each Stage |
@@ -36,7 +35,7 @@ We report Pass@1 accuracy averaged over 16 samples for each problem.
 | <strong>FastCuRL-1.5B-Preview</strong> | <strong>43.1</strong> | <strong>88.0</strong> | <strong>74.2</strong> | 31.6 | <strong>50.4</strong> | <strong>57.5</strong> |
 
 
-## Training Data
+### Training Data
 Following DeepScaleR, our training dataset consists of 40,315 unique problem-answer pairs compiled from:
 - AIME problems (1984-2023)
 - AMC problems (before 2023)
@@ -47,7 +46,7 @@ In FastCuRL, we propose a simple condition-sensitive data segmentation approach,
 
 [Segmented Datasets](https://huggingface.co/datasets/Nickyang/FastCuRL)
 
-## Training Strategy
+### Training Strategy
 In FastCuRL, we propose a curriculum-guided iterative lengthening approach for improving the RL training efficiency of R1-like reasoning models. Specifically, the four stages are as follows:
 - Stage I (8K context,∼160 steps)
 - Stage II (16K context,∼295 steps)
@@ -55,7 +54,7 @@ In FastCuRL, we propose a curriculum-guided iterative lengthening approach for i
 - Stage IV (24K context,∼290 steps)
 
 
-## Acknowledgements
+### Acknowledgements
 
 - Our training experiments are powered by our heavily modified fork of [verl](https://github.com/volcengine/verl) and [deepscaler](https://github.com/agentica-project/deepscaler).
 - Our model is trained on top of [`DeepSeek-R1-Distill-Qwen-1.5B`](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B).
