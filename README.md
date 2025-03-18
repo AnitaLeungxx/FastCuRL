@@ -59,13 +59,25 @@ In FastCuRL, we propose a simple condition-sensitive data segmentation approach,
 ### Training Strategy
 In FastCuRL, we propose a curriculum-guided iterative lengthening approach for improving the RL training efficiency of R1-like reasoning models. Specifically, the four stages are as follows:
 - Stage I (8K context,∼160 steps)
-![alt text](img/fastcurl_stage1.png)
+
+<p>
+<img src="img/fastcurl_stage1.png" width = "90%" />
+</p>
 - Stage II (16K context,∼295 steps)
-![alt text](img/fastcurl_stage2.png)
+
+<p>
+<img src="img/fastcurl_stage2.png" width = "90%" />
+</p>
 - Stage III (24K context,∼115 steps)
-![alt text](img/fastcurl_stage3.png)
+
+<p>
+<img src="img/fastcurl_stage3.png" width = "90%" />
+</p>
 - Stage IV (24K context,∼290 steps)
-![alt text](img/fastcurl_stage4.png)
+
+<p>
+<img src="img/fastcurl_stage4.png" width = "90%" />
+</p>
 
 Overall, we find that during the whole training process, the steps chosen for stage transitions mainly occurred toward the end of each stage, further highlighting the efficiency of the proposed FastCuRL approach.
 
