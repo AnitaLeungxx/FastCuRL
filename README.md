@@ -45,7 +45,7 @@ Following DeepScaleR, our training dataset consists of 40,315 unique problem-ans
 - Still dataset
 
 <p>
-<img src="img/length_distribution.png" width = "70%" />
+<img src="img/length_distribution.png" width = "50%" />
 </p>
 
 In FastCuRL, we propose a simple condition-sensitive data segmentation approach, which splits the original dataset into three subsets.
@@ -53,7 +53,7 @@ In FastCuRL, we propose a simple condition-sensitive data segmentation approach,
 [Segmented Datasets](https://huggingface.co/datasets/Nickyang/FastCuRL)
 
 <p>
-<img src="img/length_distribution.png" width = "70%" />
+<img src="img/analysis.png" width = "90%" />
 </p>
 
 ### Training Strategy
