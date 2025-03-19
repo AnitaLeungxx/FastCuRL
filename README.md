@@ -58,24 +58,6 @@ In FastCuRL, we propose a simple condition-sensitive data segmentation approach,
 ### Training Strategy
 In FastCuRL, we propose a curriculum-guided iterative lengthening approach for improving the RL training efficiency of R1-like reasoning models. Specifically, the four stages are as follows:
 
-```bash
-export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
-export VLLM_ATTENTION_BACKEND=XFORMERS
-
-# Run 8K context length training, 160 steps
-bash ./scripts/train/run_fastcurl_1.5b_8k_stage1.sh | tee -a fastcurl-1.5b-stage1.log
-
-# Run 16K context length training, 590 steps
-bash ./scripts/train/run_fastcurl_1.5b_16k_stage2.sh | tee -a fastcurl-1.5b-stage2.log
-
-# Run 24K context length training, 230 steps
-bash ./scripts/train/run_fastcurl_1.5b_24k_stage3.sh | tee -a fastcurl-1.5b-stage3.log
-
-# Run 24K context length training, 580 steps
-bash ./scripts/train/run_fastcurl_1.5b_24k_stage4.sh | tee -a fastcurl-1.5b-stage4.log
-
-```
-
 - Stage I (8K context,∼160 steps)
 
 <p>
@@ -101,6 +83,26 @@ bash ./scripts/train/run_fastcurl_1.5b_24k_stage4.sh | tee -a fastcurl-1.5b-stag
 </p>
 
 Overall, we find that during the whole training process, the steps chosen for stage transitions mainly occurred toward the end of each stage, further highlighting the efficiency of the proposed FastCuRL approach.
+
+### Training Scripts
+
+```bash
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+export VLLM_ATTENTION_BACKEND=XFORMERS
+
+# Run 8K context length training, 160 steps
+bash ./scripts/train/run_fastcurl_1.5b_8k_stage1.sh | tee -a fastcurl-1.5b-stage1.log
+
+# Run 16K context length training, 590 steps
+bash ./scripts/train/run_fastcurl_1.5b_16k_stage2.sh | tee -a fastcurl-1.5b-stage2.log
+
+# Run 24K context length training, 230 steps
+bash ./scripts/train/run_fastcurl_1.5b_24k_stage3.sh | tee -a fastcurl-1.5b-stage3.log
+
+# Run 24K context length training, 580 steps
+bash ./scripts/train/run_fastcurl_1.5b_24k_stage4.sh | tee -a fastcurl-1.5b-stage4.log
+
+```
 
 ### Acknowledgements
 
