@@ -76,6 +76,8 @@ bash run_fastcurl-1.5b_24k.sh | tee fastcurl-1.5b-stage4.log
 
 ```
 
+The code is currently being organized...
+
 - Stage I (8K context,∼160 steps)
 
 <p>
