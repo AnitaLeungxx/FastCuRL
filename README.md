@@ -63,20 +63,18 @@ export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 export VLLM_ATTENTION_BACKEND=XFORMERS
 
 # Run 8K context length training, 160 steps
-bash run_fastcurl-1.5b_8k.sh | tee fastcurl-1.5b-stage1.log
+bash ./scripts/train/run_fastcurl_1.5b_8k_stage1.sh | tee -a fastcurl-1.5b-stage1.log
 
 # Run 16K context length training, 590 steps
-bash run_fastcurl-1.5b_16k.sh | tee fastcurl-1.5b-stage2.log
+bash ./scripts/train/run_fastcurl_1.5b_16k_stage2.sh | tee -a fastcurl-1.5b-stage2.log
 
 # Run 24K context length training, 230 steps
-bash run_fastcurl-1.5b_24k.sh | tee fastcurl-1.5b-stage3.log
+bash ./scripts/train/run_fastcurl_1.5b_24k_stage3.sh | tee -a fastcurl-1.5b-stage3.log
 
 # Run 24K context length training, 580 steps
-bash run_fastcurl-1.5b_24k.sh | tee fastcurl-1.5b-stage4.log
+bash ./scripts/train/run_fastcurl_1.5b_24k_stage4.sh | tee -a fastcurl-1.5b-stage4.log
 
 ```
-
-The code is currently being organized...
 
 - Stage I (8K context,∼160 steps)
 
