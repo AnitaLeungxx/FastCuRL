@@ -104,6 +104,19 @@ bash ./scripts/train/run_fastcurl_1.5b_24k_stage4.sh | tee -a fastcurl-1.5b-stag
 
 ```
 
+## Citation
+
+```bibtex
+@misc{fastcurl2025,
+  title={FastCuRL: Improving RL Training Efficiency of R1-like Reasoning Models via Curriculum-Guided Iterative Lengthening},
+  author={Mingyang Song, Mao Zheng, Zheng Li, Wenjie Yang, Xuan Luo, Yue Pan, Feng Zhang},
+  year={2025},
+  howpublished={\url{https://github.com/nick7nlp/FastCuRL/blob/main/FastCuRL.pdf}},
+  note={Technical Report}
+}
+```
+
+
 ### Acknowledgements
 
 - Our model is trained on top of [`DeepSeek-R1-Distill-Qwen-1.5B`](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B).
