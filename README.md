@@ -104,7 +104,7 @@ bash ./scripts/train/run_fastcurl_1.5b_24k_stage4.sh | tee -a fastcurl-1.5b-stag
 
 ```
 
-## Citation
+### Citation
 
 ```bibtex
 @misc{fastcurl2025,
