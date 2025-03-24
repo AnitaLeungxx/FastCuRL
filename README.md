@@ -107,12 +107,14 @@ bash ./scripts/train/run_fastcurl_1.5b_24k_stage4.sh | tee -a fastcurl-1.5b-stag
 ### Citation
 
 ```bibtex
-@misc{fastcurl2025,
-  title={FastCuRL: Improving RL Training Efficiency of R1-like Reasoning Models via Curriculum-Guided Iterative Lengthening},
-  author={Mingyang Song, Mao Zheng, Zheng Li, Wenjie Yang, Xuan Luo, Yue Pan, Feng Zhang},
-  year={2025},
-  howpublished={\url{https://github.com/nick7nlp/FastCuRL/blob/main/FastCuRL.pdf}},
-  note={Technical Report}
+@misc{fastcurl,
+      title={FastCuRL: Curriculum Reinforcement Learning with Progressive Context Extension for Efficient Training R1-like Reasoning Models}, 
+      author={Mingyang Song and Mao Zheng and Zheng Li and Wenjie Yang and Xuan Luo and Yue Pan and Feng Zhang},
+      year={2025},
+      eprint={2503.17287},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.17287}, 
 }
 ```
 
