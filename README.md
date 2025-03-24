@@ -1,5 +1,5 @@
 <div align='center'>
-<h2>FastCuRL: Improving RL Training Efficiency of R1-like Reasoning Models via Curriculum-Guided Iterative Lengthening</h2>
+<h2>FastCuRL: Curriculum Reinforcement Learning with Progressive Context Extension for Efficient Training R1-like Reasoning Models</h2>
 
 <!-- TODO:  Thread, Paper, Dataset, Weights-->
 [![Paper](https://img.shields.io/badge/paper-5f16a8?style=for-the-badge&logo=arxiv&logoColor=white)](FastCuRL.pdf)
