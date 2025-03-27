@@ -108,6 +108,25 @@ bash ./scripts/train/run_fastcurl_1.5b_24k_stage4.sh | tee -a fastcurl-1.5b-stag
 
 ```
 
+### Evaluate
+
+```bash
+python3 -m verl.trainer.main_generation \
+    trainer.nnodes=1 \
+    trainer.n_gpus_per_node=8 \
+    data.path=./fastcurl/data/test/xxx.parquet \
+    data.output_path=${OUTPUT_DIR}/xxx.parquet \
+    data.n_samples=16 \
+    data.batch_size=2048 \
+    model.path=${MODEL_PATH} \
+    rollout.temperature=0.6 \
+    rollout.response_length=32768 \
+    rollout.top_k=-1 \
+    rollout.top_p=1 \
+    rollout.gpu_memory_utilization=0.9 \
+    rollout.tensor_model_parallel_size=1
+```
+
 ### Citation
 
 ```bibtex
