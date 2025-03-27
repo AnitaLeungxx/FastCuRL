@@ -54,7 +54,7 @@ for DATA_TYPE in "${DATATYPES[@]}"; do
         rollout.temperature=0.6 \
         rollout.response_length=32768 \
         rollout.top_k=-1 \
-        rollout.top_p=0.95 \
+        rollout.top_p=1 \
         rollout.gpu_memory_utilization=0.9 \
         rollout.tensor_model_parallel_size=1
 done
