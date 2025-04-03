@@ -88,6 +88,15 @@ In FastCuRL, we propose a curriculum-guided iterative lengthening approach for i
 
 Overall, we find that during the whole training process, the steps chosen for stage transitions mainly occurred toward the end of each stage, further highlighting the efficiency of the proposed FastCuRL approach.
 
+### Entropy Loss
+
+We observe the changes in entropy loss during the training process and find differences between our training strategy and that of DeepScaleR.
+
+<p>
+<img src="img/entropy_loss.png" width = "80%" />
+</p>
+
+
 ### Training Scripts
 
 ```bash
