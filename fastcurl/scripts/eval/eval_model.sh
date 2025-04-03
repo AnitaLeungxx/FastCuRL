@@ -58,3 +58,4 @@ for DATA_TYPE in "${DATATYPES[@]}"; do
         rollout.gpu_memory_utilization=0.9 \
         rollout.tensor_model_parallel_size=1
 done
+
