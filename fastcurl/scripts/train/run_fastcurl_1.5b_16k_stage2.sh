@@ -29,7 +29,7 @@ python3 -m verl.trainer.main_ppo \
     algorithm.adv_estimator=grpo \
     data.train_files=./fastcurl/data/train/train_o_cot.parquet \
     data.val_files=./fastcurl/data/test/aime2024.parquet \
-    data.train_batch_size=128 \
+    data.train_batch_size=64 \
     data.val_batch_size=256 \
     data.max_prompt_length=1024 \
     data.max_response_length=16384 \
