@@ -27,7 +27,7 @@ fi
 # Train over a single node, 8 A100-80GB GPUs.
 python3 -m verl.trainer.main_ppo \
     algorithm.adv_estimator=grpo \
-    data.train_files=./fastcurl/data/train/train_o_cot.parquet \
+    data.train_files=./fastcurl/data/train/train_L2.parquet \
     data.val_files=./fastcurl/data/test/aime2024.parquet \
     data.train_batch_size=64 \
     data.val_batch_size=256 \
