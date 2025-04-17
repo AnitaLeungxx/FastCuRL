@@ -80,7 +80,7 @@ In FastCuRL, we propose a curriculum-guided iterative lengthening approach for i
 <img src="img/fastcurl_stage3.png" width = "90%" />
 </p>
 
-- Stage IV (24K context,∼580 steps)
+- Stage IV (16K context,∼580 steps)
 
 <p>
 <img src="img/fastcurl_stage4.png" width = "90%" />
@@ -112,8 +112,8 @@ bash ./scripts/train/run_fastcurl_1.5b_16k_stage2.sh | tee -a fastcurl-1.5b-stag
 # Run 24K context length training, 230 steps
 bash ./scripts/train/run_fastcurl_1.5b_24k_stage3.sh | tee -a fastcurl-1.5b-stage3.log
 
-# Run 24K context length training, 580 steps
-bash ./scripts/train/run_fastcurl_1.5b_24k_stage4.sh | tee -a fastcurl-1.5b-stage4.log
+# Run 16K context length training, 580 steps
+bash ./scripts/train/run_fastcurl_1.5b_16k_stage4.sh | tee -a fastcurl-1.5b-stage4.log
 
 ```
 
