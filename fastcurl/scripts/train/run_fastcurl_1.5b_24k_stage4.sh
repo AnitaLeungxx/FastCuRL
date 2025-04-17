@@ -32,7 +32,7 @@ python3 -m verl.trainer.main_ppo \
     data.train_batch_size=64 \
     data.val_batch_size=256 \
     data.max_prompt_length=1024 \
-    data.max_response_length=24576 \
+    data.max_response_length=16384 \
     actor_rollout_ref.model.path=$MODEL_PATH  \
     actor_rollout_ref.actor.optim.lr=1e-6 \
     actor_rollout_ref.model.use_remove_padding=True \
@@ -52,12 +52,12 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.rollout.temperature=0.6 \
     actor_rollout_ref.rollout.val_temperature=0.6 \
     actor_rollout_ref.rollout.gpu_memory_utilization=0.85 \
-    actor_rollout_ref.rollout.n=8 \
-    actor_rollout_ref.rollout.n_val=8 \
+    actor_rollout_ref.rollout.n=16 \
+    actor_rollout_ref.rollout.n_val=16 \
     actor_rollout_ref.ref.fsdp_config.param_offload=True \
     algorithm.kl_ctrl.kl_coef=0.001 \
     trainer.critic_warmup=0 \
-    trainer.logger=['console'] \
+    trainer.logger=['console','wandb'] \
     trainer.project_name='fastcurl' \
     trainer.experiment_name='fastcurl-1.5b-stage4' \
     +trainer.val_before_train=True \
