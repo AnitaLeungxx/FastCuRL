@@ -1,5 +1,5 @@
 <div align='center'>
-<h2>FastCuRL: Curriculum Reinforcement Learning with Progressive Context Extension for Efficient Training R1-like Reasoning Models</h2>
+<h2>FastCuRL: Curriculum Reinforcement Learning with Stage-wise Context Scaling for Efficient Training R1-like Reasoning Models</h2>
 
 <!-- TODO:  Thread, Paper, Dataset, Weights-->
 [![Paper](https://img.shields.io/badge/paper-5f16a8?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.17287)
@@ -8,8 +8,11 @@
 </div>
 
 
-We release **FastCuRL-1.5B-Preview**, a slow-thinking reasoning model that **outperforms** :chart_with_upwards_trend: the previous SoTA *DeepScaleR-1.5B-Preview* with :rocket: **50% training steps**! We adapt a novel curriculum-guided iterative lengthening reinforcement learning to the *DeepSeek-R1-Distill-Qwen-1.5B* and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
+We release **FastCuRL-1.5B-Preview**, a slow-thinking reasoning model that **outperforms** :chart_with_upwards_trend: the previous SoTA *DeepScaleR-1.5B-Preview* with :rocket: **50% training steps**! We adopt a novel curriculum-guided iterative lengthening reinforcement learning to the *DeepSeek-R1-Distil-Qwen-1.5B* and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
 
+<p>
+<img src="img/fastcurl_stage1.png" width = "90%" />
+</p>
 
 **The current version of the uploaded paper is unfinished and will be updated. We aim to share some findings in time.**
 
@@ -22,8 +25,10 @@ Training Details.
 |-------|-----------|-----------|-----------|
 | DeepScaleR-1.5B-Preview | ~1,750 | 3 | 8, 16, 32 |
 | **FastCuRL-1.5B-Preview** | ~860 | 4 | **8**, **8**, **8**, **8** |
+| **FastCuRL-1.5B-V2** | ~1,710 | 5 | **8**, **8**, **8**, **8**, **8** |
+| **FastCuRL-1.5B-V3** | ~2,620 | 5 | **8**, **8**, **8**, **8**, **8** |
 
-Here, we uniformly set the batch size to 128 for counting training steps, meaning two steps with batch size 64 are counted as one with batch size 128. 
+Here, we uniformly set the batch size to 128 for counting training steps, meaning two steps with a batch size of 64 are counted as one with a batch size of 128. 
 
 We report Pass@1 accuracy averaged over 16 samples for each problem.
 
@@ -36,7 +41,9 @@ We report Pass@1 accuracy averaged over 16 samples for each problem.
 | DeepSeek-R1-Distill-Qwen-1.5B | 28.8 | 82.8 | 62.9 | 26.5 | 43.3 | 48.9 |
 | Still-1.5B | 32.5 | 84.4 | 66.7 | 29.0 | 45.4 | 51.6 |
 | DeepScaleR-1.5B-Preview | 43.1 | 87.8 | 73.6 | 30.2 | 50.0 | 57.0 |
-| <strong>FastCuRL-1.5B-Preview</strong> | <strong>43.1</strong> | <strong>88.0</strong> | <strong>74.2</strong> | 31.6 | <strong>50.4</strong> | <strong>57.5</strong> |
+| <strong>FastCuRL-1.5B-Preview</strong> | 43.1 | 88.0 | 74.2 | 31.6 | 50.4 | 57.5 |
+| <strong>FastCuRL-1.5B-V2</strong> | 47.5 | 89.3 | 77.0 | 32.8 | 53.3 | 60.0 |
+| <strong>FastCuRL-1.5B-V3</strong> | <strong>49.6</strong> | <strong>90.5</strong> | <strong>78.5</strong> | <strong>34.7</strong> | <strong>54.5</strong> | <strong>61.6</strong> |
 
 
 ### Training Data
@@ -56,43 +63,6 @@ In FastCuRL, we propose a simple condition-sensitive data segmentation approach,
 
 <p>
 <img src="img/analysis.png" width = "90%" />
-</p>
-
-### Training Strategy
-In FastCuRL, we propose a curriculum-guided iterative lengthening approach for improving the RL training efficiency of R1-like reasoning models. Specifically, the four stages are as follows:
-
-- Stage I (8K context,∼160 steps)
-
-<p>
-<img src="img/fastcurl_stage1.png" width = "90%" />
-</p>
-
-- Stage II (16K context,∼590 steps)
-
-<p>
-<img src="img/fastcurl_stage2.png" width = "90%" />
-</p>
-
-- Stage III (24K context,∼230 steps)
-
-<p>
-<img src="img/fastcurl_stage3.png" width = "90%" />
-</p>
-
-- Stage IV (16K context,∼580 steps)
-
-<p>
-<img src="img/fastcurl_stage4.png" width = "90%" />
-</p>
-
-Overall, we find that during the whole training process, the steps chosen for stage transitions mainly occurred toward the end of each stage, further highlighting the efficiency of the proposed FastCuRL approach.
-
-### Entropy Loss
-
-We observe the changes in entropy loss during the training process and find differences between our training strategy and that of DeepScaleR.
-
-<p>
-<img src="img/entropy_loss.png" width = "80%" />
 </p>
 
 
