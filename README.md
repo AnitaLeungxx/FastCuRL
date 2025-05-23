@@ -2,7 +2,7 @@
 <h2>FastCuRL: Curriculum Reinforcement Learning with Stage-wise Context Scaling for Efficient Training R1-like Reasoning Models</h2>
 
 <!-- TODO:  Thread, Paper, Dataset, Weights-->
-[![Paper](https://img.shields.io/badge/paper-5f16a8?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.17287)
+[![Paper](https://img.shields.io/badge/paper-5f16a8?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2503.17287)
 <a href="https://huggingface.co/collections/Nickyang/fastcurl-681ddd92965798cccff1e042" target="_blank"><img alt="Hugging Face"
     src="https://img.shields.io/badge/HuggingFace-fcd022?style=for-the-badge&logo=huggingface&logoColor=000&labelColor"/></a>
 </div>
@@ -109,7 +109,7 @@ python3 -m verl.trainer.main_generation \
 
 ```bibtex
 @misc{fastcurl,
-      title={FastCuRL: Curriculum Reinforcement Learning with Progressive Context Extension for Efficient Training R1-like Reasoning Models}, 
+      title={FastCuRL: Curriculum Reinforcement Learning with Stage-wise Context Scaling for Efficient Training R1-like Reasoning Models}, 
       author={Mingyang Song and Mao Zheng and Zheng Li and Wenjie Yang and Xuan Luo and Yue Pan and Feng Zhang},
       year={2025},
       eprint={2503.17287},
