@@ -16,7 +16,7 @@ We release [**FastCuRL-1.5B-V3**](https://huggingface.co/Nickyang/FastCuRL-1.5B-
 We release [**FastCuRL-1.5B-Preview**](https://huggingface.co/Nickyang/FastCuRL-1.5B-Preview), a slow-thinking reasoning model that **outperforms** :chart_with_upwards_trend: the previous SoTA *DeepScaleR-1.5B-Preview* with :rocket: **50% training steps**! We adopt a novel curriculum-guided iterative lengthening reinforcement learning to the *DeepSeek-R1-Distil-Qwen-1.5B* and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
 
 <p align='center'>
-<img src="img/preview.png" width = "90%" />
+<img src="img/preview.png" width = "70%" />
 </p>
 
 ### Key Results
@@ -55,16 +55,14 @@ Following DeepScaleR, our training dataset consists of 40,315 unique problem-ans
 - Omni-MATH dataset
 - Still dataset
 
-<p>
-<img src="img/length_distribution.png" width = "50%" />
+<p align='center'>
+<img src="img/length_distribution.png" width = "70%" />
 </p>
 
-In FastCuRL, we propose a simple condition-sensitive data segmentation approach, which splits the original dataset into three subsets.
+### Entropy
 
-[Segmented Datasets](https://huggingface.co/datasets/Nickyang/FastCuRL)
-
-<p>
-<img src="img/analysis.png" width = "90%" />
+<p align='center'>
+<img src="img/entropy_all_stages.png" width = "70%" />
 </p>
 
 
