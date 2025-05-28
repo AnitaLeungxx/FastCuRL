@@ -21,8 +21,6 @@ We release [**FastCuRL-1.5B-Preview**](https://huggingface.co/Nickyang/FastCuRL-
 
 ### Key Results
 
-Training Details. 
-
 | Model | Training Steps  | Training Stages | Number of GPUs Used in Each Stage |
 |-------|-----------|-----------|-----------|
 | DeepScaleR-1.5B-Preview | ~1,750 | 3 | 8, 16, 32 |
@@ -47,6 +45,18 @@ We report Pass@1 accuracy averaged over 16 samples for each problem.
 | <strong>FastCuRL-1.5B-V2</strong> | 47.5 | 89.3 | 77.0 | 32.8 | 53.3 | 60.0 |
 | <strong>FastCuRL-1.5B-V3</strong> | <strong>49.6</strong> | <strong>90.5</strong> | <strong>78.5</strong> | <strong>34.7</strong> | <strong>54.5</strong> | <strong>61.6</strong> |
 
+## Getting Started 🎯
+### Installation
+```bash
+# Installing Python 3.10 Environment.
+conda create -n rllm python=3.10 -y
+conda activate rllm
+
+# Installing RLLM dependencies.
+cd rllm
+pip install -e ./verl
+pip install -e .
+```
 
 ### Training Data
 Following DeepScaleR, our training dataset consists of 40,315 unique problem-answer pairs compiled from:
@@ -95,7 +105,8 @@ python3 -m verl.trainer.main_generation \
     data.path=./fastcurl/data/test/xxx.parquet \
     data.output_path=${OUTPUT_DIR}/xxx.parquet \
     data.n_samples=16 \
-    data.batch_size=2048 \
+    data.batch_size=2048 I am running a few minutes late; my previous meeting is running over.
+    
     model.path=${MODEL_PATH} \
     rollout.temperature=0.6 \
     rollout.response_length=32768 \
