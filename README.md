@@ -15,8 +15,8 @@ We release [**FastCuRL-1.5B-V3**](https://huggingface.co/Nickyang/FastCuRL-1.5B-
 
 We release [**FastCuRL-1.5B-Preview**](https://huggingface.co/Nickyang/FastCuRL-1.5B-Preview), a slow-thinking reasoning model that **outperforms** :chart_with_upwards_trend: the previous SoTA *DeepScaleR-1.5B-Preview* with :rocket: **50% training steps**! We adopt a novel curriculum-guided iterative lengthening reinforcement learning to the *DeepSeek-R1-Distil-Qwen-1.5B* and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
 
-<p>
-<img src="img/preview.pdf" width = "90%" />
+<p align='center'>
+<img src="img/preview.png" width = "90%" />
 </p>
 
 ### Key Results
