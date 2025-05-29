@@ -7,6 +7,10 @@
     src="https://img.shields.io/badge/HuggingFace-fcd022?style=for-the-badge&logo=huggingface&logoColor=000&labelColor"/></a>
 </div>
 
+<p align='center'>
+<img src="img/preview.png" width = "70%" />
+</p>
+
 ### 2025.05.23
 
 We release [**FastCuRL-1.5B-V3**](https://huggingface.co/Nickyang/FastCuRL-1.5B-V3) and [**FastCuRL-1.5B-V2**](https://huggingface.co/Nickyang/FastCuRL-1.5B-V2).
@@ -14,10 +18,6 @@ We release [**FastCuRL-1.5B-V3**](https://huggingface.co/Nickyang/FastCuRL-1.5B-
 ### 2025.03.17
 
 We release [**FastCuRL-1.5B-Preview**](https://huggingface.co/Nickyang/FastCuRL-1.5B-Preview), a slow-thinking reasoning model that **outperforms** :chart_with_upwards_trend: the previous SoTA *DeepScaleR-1.5B-Preview* with :rocket: **50% training steps**! We adopt a novel curriculum-guided iterative lengthening reinforcement learning to the *DeepSeek-R1-Distil-Qwen-1.5B* and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
-
-<p align='center'>
-<img src="img/preview.png" width = "70%" />
-</p>
 
 ### Key Results
 
