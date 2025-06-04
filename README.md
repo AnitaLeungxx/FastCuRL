@@ -11,13 +11,11 @@
 <img src="img/preview.png" width = "70%" />
 </p>
 
-### 2025.05.23
 
-We release [**FastCuRL-1.5B-V3**](https://huggingface.co/Nickyang/FastCuRL-1.5B-V3) and [**FastCuRL-1.5B-V2**](https://huggingface.co/Nickyang/FastCuRL-1.5B-V2).
+## 🎉News
 
-### 2025.03.17
-
-We release [**FastCuRL-1.5B-Preview**](https://huggingface.co/Nickyang/FastCuRL-1.5B-Preview), a slow-thinking reasoning model that **outperforms** :chart_with_upwards_trend: the previous SoTA *DeepScaleR-1.5B-Preview* with :rocket: **50% training steps**! We propose a curriculum RL framework with stage-wise context scaling to achieve efficient training and concise CoT reasoning based on *DeepSeek-R1-Distil-Qwen-1.5B* and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
+- **[2025/05/23]** 🎉 We release [**FastCuRL-1.5B-V3**](https://huggingface.co/Nickyang/FastCuRL-1.5B-V3) and [**FastCuRL-1.5B-V2**](https://huggingface.co/Nickyang/FastCuRL-1.5B-V2).
+- **[2025/05/17]** We release [**FastCuRL-1.5B-Preview**](https://huggingface.co/Nickyang/FastCuRL-1.5B-Preview), a slow-thinking reasoning model that **outperforms** :chart_with_upwards_trend: the previous SoTA *DeepScaleR-1.5B-Preview* with :rocket: **50% training steps**! We propose a curriculum RL framework with stage-wise context scaling to achieve efficient training and concise CoT reasoning based on *DeepSeek-R1-Distil-Qwen-1.5B* and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
 
 ### Key Results
 
