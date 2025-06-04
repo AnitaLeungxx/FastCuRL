@@ -116,6 +116,8 @@ python3 -m verl.trainer.main_generation \
 
 ## 🎈Citation
 
+If you find our work helpful, feel free to give us a cite.
+
 ```bibtex
 @misc{fastcurl,
       title={FastCuRL: Curriculum Reinforcement Learning with Stage-wise Context Scaling for Efficient Training R1-like Reasoning Models}, 
