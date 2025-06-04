@@ -17,16 +17,7 @@
 - **[2025/05/23]** 🎉 We release [**FastCuRL-1.5B-V3**](https://huggingface.co/Nickyang/FastCuRL-1.5B-V3) and [**FastCuRL-1.5B-V2**](https://huggingface.co/Nickyang/FastCuRL-1.5B-V2).
 - **[2025/05/17]** We release [**FastCuRL-1.5B-Preview**](https://huggingface.co/Nickyang/FastCuRL-1.5B-Preview), a slow-thinking reasoning model that **outperforms** :chart_with_upwards_trend: the previous SoTA *DeepScaleR-1.5B-Preview* with :rocket: **50% training steps**! We propose a curriculum RL framework with stage-wise context scaling to achieve efficient training and concise CoT reasoning based on *DeepSeek-R1-Distil-Qwen-1.5B* and observe continuous performance improvement as training steps increase. To better reproduce our work and advance research progress, we open-source our code, model, and data.
 
-### Key Results
-
-| Model | Training Steps  | Training Stages | Number of GPUs Used in Each Stage |
-|-------|-----------|-----------|-----------|
-| DeepScaleR-1.5B-Preview | ~1,750 | 3 | 8, 16, 32 |
-| **FastCuRL-1.5B-Preview** | ~860 | 4 | **8**, **8**, **8**, **8** |
-| **FastCuRL-1.5B-V2** | ~1,710 | 5 | **8**, **8**, **8**, **8**, **8** |
-| **FastCuRL-1.5B-V3** | ~2,620 | 5 | **8**, **8**, **8**, **8**, **8** |
-
-Here, we uniformly set the batch size to 128 for counting training steps, meaning two steps with a batch size of 64 are counted as one with a batch size of 128. 
+## ✨Key Results
 
 We report Pass@1 accuracy averaged over 16 samples for each problem.
 
@@ -43,7 +34,16 @@ We report Pass@1 accuracy averaged over 16 samples for each problem.
 | <strong>FastCuRL-1.5B-V2</strong> | 47.5 | 89.3 | 77.0 | 32.8 | 53.3 | 60.0 |
 | <strong>FastCuRL-1.5B-V3</strong> | <strong>49.6</strong> | <strong>90.5</strong> | <strong>78.5</strong> | <strong>34.7</strong> | <strong>54.5</strong> | <strong>61.6</strong> |
 
-## Getting Started 🎯
+| Model | Training Steps  | Training Stages | Number of GPUs Used in Each Stage |
+|-------|-----------|-----------|-----------|
+| DeepScaleR-1.5B-Preview | ~1,750 | 3 | 8, 16, 32 |
+| **FastCuRL-1.5B-Preview** | ~860 | 4 | **8**, **8**, **8**, **8** |
+| **FastCuRL-1.5B-V2** | ~1,710 | 5 | **8**, **8**, **8**, **8**, **8** |
+| **FastCuRL-1.5B-V3** | ~2,620 | 5 | **8**, **8**, **8**, **8**, **8** |
+
+Here, we uniformly set the batch size to 128 for counting training steps, meaning two steps with a batch size of 64 are counted as one with a batch size of 128. 
+
+## 🎯Getting Started
 ### Installation
 ```bash
 # Installing Python 3.10 Environment.
@@ -114,7 +114,7 @@ python3 -m verl.trainer.main_generation \
     rollout.tensor_model_parallel_size=1
 ```
 
-### Citation
+## 🎈Citation
 
 ```bibtex
 @misc{fastcurl,
@@ -129,7 +129,7 @@ python3 -m verl.trainer.main_generation \
 ```
 
 
-### Acknowledgements
+## 🌻Acknowledgements
 
 - Our model is trained on top of [`DeepSeek-R1-Distill-Qwen-1.5B`](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B).
 - Our training experiments are powered by our heavily modified fork of [verl](https://github.com/volcengine/verl).
