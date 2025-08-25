@@ -2,7 +2,7 @@
 <h2>FastCuRL: Curriculum Reinforcement Learning with Stage-wise <br>Context Scaling for Efficient LLM Reasoning</h2>
 
 <!-- TODO:  Thread, Paper, Dataset, Weights-->
-[![Paper](https://img.shields.io/badge/paper-5f16a8?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2503.17287)
+[![Paper](https://img.shields.io/badge/arxiv-5f16a8?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2503.17287)
 <a href="https://huggingface.co/collections/Nickyang/fastcurl-681ddd92965798cccff1e042" target="_blank"><img alt="Hugging Face"
     src="https://img.shields.io/badge/HuggingFace-fcd022?style=for-the-badge&logo=huggingface&logoColor=000&labelColor"/></a>
 </div>
